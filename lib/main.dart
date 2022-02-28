@@ -12,9 +12,25 @@ class MyApp extends StatelessWidget {
   // ignore: dead_code
   Widget build(BuildContext context) {
     return MaterialApp(
-     
-      ),
-    );
+      title: 'Prestest',
+      theme: ThemeData(primarySwatch: Colors.pink),
+      home: Scaffold(appBar: AppBar(title: Text('Kalkulator')),
+        body: Column(children: [
+          //text
+          Container(
+            child: Text('Hasil Perhitungan : '),
+          ),
+          // text form 1
+          Container(
+            child: TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: "masukkakn nomor pertama" ),
+            ),
+          )
+        ]),
+      ) 
+      );
   }
 }
 
