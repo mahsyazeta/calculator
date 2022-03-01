@@ -1,19 +1,21 @@
-import 'dart:html';
-
+// ignore: unused_import
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: MyApp(),
+  ));
 }
 
 class MyApp extends StatefulWidget{
   const MyApp({Key? key}) : super(key: key);
 
   @override
-  _MyAppState createState()=>_MyAppState();
+  _MyAppState createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyApp>{
   TextEditingController masukanPertama = TextEditingController();
   TextEditingController masukanKedua = TextEditingController();
   int? hasil =0, input1 =0, input2=0;
@@ -49,9 +51,10 @@ class _MyAppState extends State<MyApp> {
       hasil = input1!~/input2!;
     });
   }
-
+  
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
        body: Column(children: [
           //text
@@ -93,6 +96,4 @@ class _MyAppState extends State<MyApp> {
         ]),
       );
   }
-  
 }
-
