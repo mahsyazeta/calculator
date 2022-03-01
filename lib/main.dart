@@ -18,14 +18,25 @@ class MyApp extends StatelessWidget {
         body: Column(children: [
           //text
           Container(
-            child: Text('Hasil Perhitungan : '),
+            child: Row(
+              children: [
+                Text('Hasil Perhitungan : '),
+              ],
+            ),
           ),
           // text form 1
           Container(
             child: TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                labelText: "masukkakn nomor pertama" ),
+                labelText: "masukan nomor pertama" ),
+            ),
+          ),
+          Container(
+            child: TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: "masukan nomor kedua" ),
             ),
           )
         ]),
